@@ -1,12 +1,18 @@
-package com.infrastructure.driver;
+package com.pov.infrastructure.driver;
+
 
 import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.FileLogger;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.StdoutLogHandler;
+import com.applitools.eyes.selenium.ClassicRunner;
+import com.applitools.eyes.selenium.Configuration;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
-import cucumber.api.java.Before;
+import com.applitools.eyes.selenium.fluent.Target;
+import com.applitools.eyes.selenium.fluent.*;
 import cucumber.api.junit.Cucumber;
+import io.cucumber.java.Before;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +22,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Setup {
 
     public static WebDriver driver;
+    public static ClassicRunner runner = new ClassicRunner();
     public static Eyes eyes = new Eyes();
     public static RectangleSize viewport = new RectangleSize(1300, 900);
 
@@ -24,8 +31,11 @@ public class Setup {
 
     @Before
     public void setWebDriver() throws Exception {
-        eyes.setApiKey("R0LKZ5VS9nB4Eq5L5lr2ilDxF5Jl716kNgSxxY9wJ8o110");
-        eyes.setLogHandler(new StdoutLogHandler(true));
+        eyes.setLogHandler(new FileLogger(true));
+        Configuration sconf = new Configuration();
+        sconf.setApiKey("R0LKZ5VS9nB4Eq5L5lr2ilDxF5Jl716kNgSxxY9wJ8o110");
+        eyes.s
+        sconf.setLogHandler(new StdoutLogHandler(true));
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
 

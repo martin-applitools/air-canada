@@ -1,4 +1,4 @@
-package com.basepage;
+package com.pov.basepage;
 
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
@@ -6,8 +6,8 @@ import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.selenium.StitchMode;
 
-import com.automatedtest.sample.infrastructure.driver.Setup;
-import com.automatedtest.sample.infrastructure.driver.Wait;
+import com.pov.infrastructure.driver.Setup;
+import com.pov.infrastructure.driver.Wait;
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {
