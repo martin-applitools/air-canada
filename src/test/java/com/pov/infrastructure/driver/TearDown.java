@@ -1,8 +1,8 @@
-package com.infrastructure.driver;
+package com.pov.infrastructure.driver;
 
 import com.applitools.eyes.selenium.Eyes;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
+import io.cucumber.core.api.Scenario; 
+import io.cucumber.java.After;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;

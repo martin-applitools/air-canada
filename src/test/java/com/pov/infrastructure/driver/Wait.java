@@ -1,4 +1,4 @@
-package com.infrastructure.driver;
+package com.pov.infrastructure.driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

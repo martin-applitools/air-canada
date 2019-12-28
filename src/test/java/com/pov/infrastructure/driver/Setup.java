@@ -11,7 +11,7 @@ import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.selenium.fluent.Target;
 import com.applitools.eyes.selenium.fluent.*;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
 import io.cucumber.java.Before;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
@@ -34,17 +34,13 @@ public class Setup {
         eyes.setLogHandler(new FileLogger(true));
         Configuration sconf = new Configuration();
         sconf.setApiKey("R0LKZ5VS9nB4Eq5L5lr2ilDxF5Jl716kNgSxxY9wJ8o110");
-        eyes.s
-        sconf.setLogHandler(new StdoutLogHandler(true));
-        eyes.setForceFullPageScreenshot(true);
-        eyes.setStitchMode(StitchMode.CSS);
-
+        sconf.setForceFullPageScreenshot(true);
+        sconf.setStitchMode(StitchMode.CSS);
         System.out.println("My Batch Id: " + batchId);
-
         BatchInfo batch = new BatchInfo("Java Cucumber Test");
         batch.setId(batchId);
-        eyes.setBatch(batch);
-
+        sconf.setBatch(batch);
+        eyes.setConfiguration(sconf);
         String browser = System.getProperty("browser");
         if (browser == null) {
             browser = "chrome";

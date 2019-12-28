@@ -1,8 +1,8 @@
-package com.homepage;
+package com.pov.homepage;
 
 import com.applitools.eyes.TestResults;
 
-import com.automatedtest.sample.basepage.BasePage;
+import com.pov.basepage.BasePage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

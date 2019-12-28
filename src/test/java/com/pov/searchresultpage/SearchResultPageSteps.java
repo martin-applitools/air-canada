@@ -1,6 +1,6 @@
-package pov.searchresultpage;
+package com.pov.searchresultpage;
 
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.Then;
 
 public class SearchResultPageSteps {
 

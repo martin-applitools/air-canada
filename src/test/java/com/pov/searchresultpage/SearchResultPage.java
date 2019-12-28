@@ -1,8 +1,8 @@
-package pov.searchresultpage;
+package com.pov.searchresultpage;
 
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.TestResults;
-import com.automatedtest.sample.basepage.BasePage;
+import com.pov.basepage.BasePage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
