@@ -1,7 +1,7 @@
-Feature: Withdraw
-  As a customer, I want to withdraw funds from my account
+Feature: PurchaseLaptop
+  As a customer, I want to purchase a macbook pro
 
-Scenario: Withdraw from account when funds are available
+Scenario: PurchaseLaptop when 
     Given a customer has an account
     And the account balance is 100.00 dollars
     When the customer withdraws 10.00 dollars

@@ -42,7 +42,7 @@ public class BaseTests {
     }
 
     public void validateWindow(){
-        eyes.open(driver, "Parabank",
+        eyes.open(driver, "DemoApp",
                 Thread.currentThread().getStackTrace()[2].getMethodName());
         eyes.checkWindow();
     }
