@@ -48,7 +48,7 @@ public class Setup {
         switch (eyesConfig) {
             case "local":
                 Configuration sconf = new Configuration();
-                sconf.setApiKey("INSERT APPLITOOLS API KEY");
+                sconf.setApiKey("INSERT APPLITOOLS API");
                 //eyes.setLogHandler(new StdoutLogHandler(true));
                 sconf.setParentBranchName("master");
                 sconf.setForceFullPageScreenshot(true);
@@ -65,7 +65,7 @@ public class Setup {
                 break;
             case "vg":
                 Configuration sconfvg = new Configuration();
-                sconfvg.setApiKey("INSERT APPLITOOLS API KEY");
+                sconfvg.setApiKey("INSERT APPLITOOLS API");
                 sconfvg.setParentBranchName("master");
                 sconfvg.setForceFullPageScreenshot(true);
                 sconfvg.setStitchMode(StitchMode.CSS);
@@ -110,6 +110,7 @@ public class Setup {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless", "--ignore-certificate-errors");
                 driver = new ChromeDriver(chromeOptions);
+                break;
             default:
                 throw new IllegalArgumentException("Browser \"" + browser + "\" isn't supported.");
         }
