@@ -1,4 +1,4 @@
-package pov.demo.aircanada;
+package demo.aircanada;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -56,4 +56,6 @@ public class AirCanadaSteps {
     public void LoyaltyOverview(String tag) {
          this.aircanadaPage.eyesCheck(tag);
     }
+    @Then("Get Applitools Test Results")
+    public void GetApplitoolsResults() { this.aircanadaPage.eyesTestResults(); }
 }

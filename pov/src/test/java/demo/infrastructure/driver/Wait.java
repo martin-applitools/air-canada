@@ -1,4 +1,4 @@
-package pov.demo.infrastructure.driver;
+package demo.infrastructure.driver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

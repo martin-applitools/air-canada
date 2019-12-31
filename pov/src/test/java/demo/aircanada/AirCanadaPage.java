@@ -1,8 +1,10 @@
-package pov.demo.aircanada;
+package demo.aircanada;
 
+import com.applitools.eyes.TestResultContainer;
 import com.applitools.eyes.TestResults;
+import com.applitools.eyes.TestResultsSummary;
 
-import pov.demo.basepage.BasePage;
+import demo.basepage.BasePage;
 import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import org.junit.Assert;
@@ -31,6 +33,7 @@ public class AirCanadaPage extends BasePage{
     void goToHomePage(){
         driver.get(HOME_PAGE_URL);
         wait.forLoading(5);
+        driver.findElement(By.cssSelector("#enUSEdition > span:nth-child(2)")).click();
     }
     void goToBookTravelPage(){
         driver.get(BOOK_TRAVEL_URL);
@@ -48,21 +51,27 @@ public class AirCanadaPage extends BasePage{
         driver.get(ALTITUDE_OVERVIEW_URL);
         wait.forLoading(5);
     }
-    void openEyes(String testName){
-        eyes.open(driver, "AirCanadaDemo", testName, viewport );
-    }
+    void openEyes(String testName){ eyes.open(driver, this.eyes.getAppName(), testName, viewport ); }
 
     void eyesCheck(String testName){
         openEyes(testName);
         eyes.checkWindow(testName);
-        eyesClose();
+        eyes.closeAsync();
     }
 
-    void eyesClose(){
+    void eyesTestResults(){
         try {
-            TestResults results = this.eyes.close(false);
-            assertTrue("Batch Name:" + results.getBatchName() + "Step Matches:" +  results.getMatches() + " Step MisMatches" +  results.getMismatches()
-            + " Test Link:" +  results.getUrl(), results.isPassed());
+            TestResultsSummary AllTestResults = this.runner.getAllTestResults(false);
+            TestResultContainer[] results = AllTestResults.getAllResults();
+            for(TestResultContainer result: results){
+                TestResults test = result.getTestResults();
+
+                if (test.getMismatches() > 0) {
+                    System.out.println("My Mismatch URL: " + test.getUrl() );
+                }
+
+                assertEquals(test.getName() + " has mismatches " + "Test Link: " + test.getUrl(), 0, test.getMismatches());
+            }
             
         } finally {
             this.eyes.abortIfNotClosed();

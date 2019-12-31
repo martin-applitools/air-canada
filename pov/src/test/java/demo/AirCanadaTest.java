@@ -1,4 +1,4 @@
-package pov.demo;
+package demo;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
@@ -17,7 +17,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 @CucumberOptions(features = {"src/test/resources/demo/AirCanada.feature"},
         strict = false, plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "json:target/cucumber_json_reports/aircanada.json"},
-        glue = {"pov.demo.infrastructure.driver",
-                "pov.demo.aircanada"})
+        glue = {"demo.infrastructure.driver",
+                "demo.aircanada"})
 public class AirCanadaTest {
 }

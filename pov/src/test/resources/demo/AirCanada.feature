@@ -12,4 +12,5 @@ Feature: AirCanada
     Then I see "Flight Information Page"
     When I go to Current Loyalty Program Overview Page
     Then Validate "Loyalty Program Overview Page"
+    Then Get Applitools Test Results
     
