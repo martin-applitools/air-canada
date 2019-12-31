@@ -20,6 +20,7 @@ Insert your Applitools API Key into src/test/java/demo/infrastructure/driver/Set
 To install all dependencies, run 
 
 ```console
+$ cd pov
 $ mvn clean install
 ```
 
