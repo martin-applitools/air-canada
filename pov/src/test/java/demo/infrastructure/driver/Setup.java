@@ -5,6 +5,7 @@ import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
+import com.applitools.eyes.MatchLevel;
 
 import cucumber.api.java.Before;
 import cucumber.api.junit.Cucumber;
@@ -29,6 +30,7 @@ public class Setup {
         eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.setForceFullPageScreenshot(true);
         eyes.setStitchMode(StitchMode.CSS);
+        eyes.setMatchLevel(MatchLevel.LAYOUT);
         
 
         System.out.println("My Batch Id: " + batchId);

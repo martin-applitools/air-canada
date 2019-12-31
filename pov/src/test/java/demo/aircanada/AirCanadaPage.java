@@ -61,8 +61,8 @@ public class AirCanadaPage extends BasePage{
     void eyesClose(){
         try {
             TestResults results = this.eyes.close(false);
-            assertTrue("Batch Name:" + results.getBatchName() + "Matches:" + results.getMatches() + "MisMatches" + results.getMismatches()
-            + " Test Link:" + results.getUrl(), results.isPassed());
+            assertTrue("Batch Name:" + results.getBatchName() + "Step Matches:" +  results.getMatches() + " Step MisMatches" +  results.getMismatches()
+            + " Test Link:" +  results.getUrl(), results.isPassed());
             
         } finally {
             this.eyes.abortIfNotClosed();
