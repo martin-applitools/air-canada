@@ -7,6 +7,7 @@ import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.selenium.StitchMode;
 import com.applitools.eyes.MatchLevel;
 
+
 import cucumber.api.java.Before;
 import cucumber.api.junit.Cucumber;
 import org.junit.BeforeClass;
@@ -19,26 +20,34 @@ public class Setup {
 
     public static WebDriver driver;
     public static Eyes eyes = new Eyes();
-    public static RectangleSize viewport = new RectangleSize(1300, 900);
+    public static RectangleSize viewport = new RectangleSize(1200, 800);
 
     private static Long unixTime = System.currentTimeMillis();
     private static String batchId = Long.toString(unixTime);
 
     @Before
     public void setWebDriver() throws Exception {
-        eyes.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
-        eyes.setLogHandler(new StdoutLogHandler(true));
-        eyes.setForceFullPageScreenshot(true);
-        eyes.setStitchMode(StitchMode.CSS);
-        eyes.setMatchLevel(MatchLevel.LAYOUT);
-        
-
-        System.out.println("My Batch Id: " + batchId);
-
-        BatchInfo batch = new BatchInfo("Applitools Demo");
-        batch.setId(batchId);
-        eyes.setBatch(batch);
-
+        String eyesConfig = System.getProperty("eyesConfig");
+        if (eyesConfig == null) {
+            eyesConfig = "local";
+        }
+        switch (eyesConfig) {
+            case "local":
+                eyes.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
+                eyes.setLogHandler(new StdoutLogHandler(true));
+                eyes.setForceFullPageScreenshot(true);
+                eyes.setStitchMode(StitchMode.CSS);
+                eyes.setMatchLevel(MatchLevel.LAYOUT);          
+                System.out.println("My Batch Id: " + batchId);
+                BatchInfo batch = new BatchInfo("Applitools Demo");
+                batch.setId(batchId);
+                eyes.setBatch(batch);
+                break;
+            case "vg":
+                break;
+            default:
+                throw new IllegalArgumentException("Eyes Config \"" + eyesConfig + "\" isn't supported.");
+        }    
         String browser = System.getProperty("browser");
         if (browser == null) {
             browser = "chrome";

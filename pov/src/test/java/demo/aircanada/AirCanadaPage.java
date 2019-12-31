@@ -49,7 +49,7 @@ public class AirCanadaPage extends BasePage{
         wait.forLoading(5);
     }
     void openEyes(String testName){
-        eyes.open(driver, "AirCanadaDemo", testName );
+        eyes.open(driver, "AirCanadaDemo", testName, viewport );
     }
 
     void eyesCheck(String testName){
