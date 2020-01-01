@@ -5,6 +5,7 @@ import com.applitools.eyes.TestResults;
 import com.applitools.eyes.TestResultsSummary;
 
 import demo.basepage.BasePage;
+import demo.TestResultsHandler.*;
 import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import org.junit.Assert;

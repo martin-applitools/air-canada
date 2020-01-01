@@ -20,7 +20,6 @@ Insert your Applitools API Key into src/test/java/demo/infrastructure/driver/Set
 To install all dependencies, run 
 
 ```console
-$ cd pov
 $ mvn clean install
 ```
 
@@ -38,3 +37,42 @@ To run the tests utilizing Applitools Ultrafast Visual Grid to render across Des
     Modify src/test/java/demo/BasePage.java: Enable Line 21, Disable Line 22
     When running the test add the optional parameter -DeyesConfig=vg: Example mvn test -DeyesConfig=vg
 
+## Project Layout ##
+
+```
+pov/report
+    HtmlReport - Formatting of Extent HTML Report  
+    LoggerReport - Formatting of Extent Logger Report
+``` 
+
+```
+pov/test-output
+    HtmlReport - HTML Report for current execution
+    LoggerReport - Logging Report for current execution
+```
+
+```
+pov/src/test/java/demo
+    aircanada/
+        AirCanadaPage.java - Selenium Page Object for the scenario.  
+        AirCanadaSteps.java - Cucumber Step defination for the scenario.
+        DownloadDiffExample.java - Example of how to use Applitools Test Result Handler.
+    basepage/
+        BasePage.java - instantiating webdriver, eyes, viewport, eyes runner, and wait. This is used by the pov/src/test/java/demo/aircanada/AirCanadaPage.java Page Object.
+    infrastructure/driver/
+        Setup.java - Contains Applitools Configuration for Local and Visual Grid, as well as Browser configuration.
+        TearDown.java - Properly Quit after Selenium webdriver is complete.
+        Wait.java - Different strategies to handle waiting during the Selenium Execution
+    TestResultsHandler/
+        ApplitoolsTestResultshandler.java - extends the capabilities of TestResults with additional API calls. With this additional API calls you will be able to retrive additional details at the end of the test
+        ResultStatus.java - extends the capabilities of TestResults with additional API calls. With this additional API calls you will be able to retrive additional details at the end of the test
+    AirCanadaTest.java - Cucumber Execution configuration for defined scenario in pov/src/test/resources/demo/AirCanada.feature
+```
+
+```
+pov/src/test/resources
+    demo/
+        AirCanada.feature - Cucumber Scenario Definition
+    extent.properties - Extent Reporting Framework config. 
+    html-config.xml - Extent HTML Report XML Config
+```

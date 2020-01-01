@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4709ae2-e7a9-4ee7-9414-d5a56783ea1d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/TestResultsHandler/ApplitoolsTestResultsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/TestResultsHandler/ResultStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/DownloadDiffExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pov/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" afterDir="false" />
@@ -26,6 +39,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="9b0aa148-bf37-4447-8d70-80a93366ba94" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -37,6 +59,9 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1Vkjl8AHcQwZT9fgJiFOVaycufP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -48,15 +73,40 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pov/src/test/java/demo/TestResultsExample" />
+      <recent name="$PROJECT_DIR$/pov/ApplitoolsTestResultsHandler" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pov" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <envs>
+        <env name="APPLITOOLS_API_KEY" value="SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <envs>
+        <env name="APPLITOOLS_API_KEY" value="SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -79,7 +129,11 @@
       <updated>1577804134730</updated>
       <workItem from="1577804145653" duration="179000" />
       <workItem from="1577804352572" duration="564000" />
-      <workItem from="1577804927576" duration="12585000" />
+      <workItem from="1577804927576" duration="17324000" />
+      <workItem from="1577835422989" duration="460000" />
+      <workItem from="1577835986449" duration="153000" />
+      <workItem from="1577836244152" duration="1200000" />
+      <workItem from="1577894373737" duration="6169000" />
     </task>
     <task id="LOCAL-00001" summary="Added Visual Grid Scenario, Readme, Command Line Options for Execution">
       <created>1577823915784</created>
@@ -102,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577825166714</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed Readme location and updated typo Setup.java">
+      <created>1577826168439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577826168439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,24 +176,33 @@
     <MESSAGE value="Added Visual Grid Scenario, Readme, Command Line Options for Execution" />
     <MESSAGE value="Updated gitignore to exclude test-output." />
     <MESSAGE value="Updated gitignore to exclude target directory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated gitignore to exclude target directory." />
+    <MESSAGE value="Fixed Readme location and updated typo Setup.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Readme location and updated typo Setup.java" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="642" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577836486849">
+      <screen x="0" y="23" width="2560" height="977" />
+    </state>
+    <state x="642" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577836486849" />
     <state x="749" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577804317319">
       <screen x="0" y="23" width="2560" height="977" />
     </state>
     <state x="749" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577804317319" />
-    <state x="670" y="116" key="CommitChangelistDialog2" timestamp="1577825166631">
+    <state x="670" y="116" key="CommitChangelistDialog2" timestamp="1577826168302">
       <screen x="0" y="23" width="2560" height="977" />
     </state>
-    <state x="670" y="116" key="CommitChangelistDialog2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577825166631" />
-    <state x="549" y="94" key="SettingsEditor" timestamp="1577804424682">
+    <state x="670" y="116" key="CommitChangelistDialog2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577826168302" />
+    <state x="932" y="283" key="EnvironmentVariablesDialog" timestamp="1577835950567">
       <screen x="0" y="23" width="2560" height="977" />
     </state>
-    <state x="549" y="94" key="SettingsEditor/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577804424682" />
-    <state x="778" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577825168374">
+    <state x="932" y="283" key="EnvironmentVariablesDialog/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577835950567" />
+    <state x="1197" y="162" key="SettingsEditor" timestamp="1577836233225">
       <screen x="0" y="23" width="2560" height="977" />
     </state>
-    <state x="778" y="253" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577825168374" />
+    <state x="1197" y="162" key="SettingsEditor/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577836233225" />
+    <state x="778" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577826169867">
+      <screen x="0" y="23" width="2560" height="977" />
+    </state>
+    <state x="778" y="253" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577826169867" />
   </component>
 </project>
