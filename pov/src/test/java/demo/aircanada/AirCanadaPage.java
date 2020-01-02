@@ -3,8 +3,8 @@ package demo.aircanada;
 import com.applitools.eyes.TestResultContainer;
 import com.applitools.eyes.TestResults;
 import com.applitools.eyes.TestResultsSummary;
-
 import demo.basepage.BasePage;
+import com.applitools.eyes.selenium.fluent.Target;
 import demo.TestResultsHandler.*;
 import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
@@ -59,6 +59,17 @@ public class AirCanadaPage extends BasePage{
         eyes.checkWindow(testName);
         eyes.closeAsync();
     }
+    void eyesCheckFluentLayout(String testName) {
+        openEyes(testName);
+        eyes.check(testName, Target.window().layout());
+        eyes.closeAsync();
+    }
+    void eyesCheckFluentLayoutRegion(String testName) {
+        openEyes(testName);
+        eyes.check(testName, Target.window().layout(By.cssSelector("#carousel-set-0")));
+        eyes.closeAsync();
+    }
+
 
     void eyesTestResults(){
         try {
@@ -71,7 +82,7 @@ public class AirCanadaPage extends BasePage{
                     System.out.println("My Mismatch URL: " + test.getUrl() );
                 }
 
-                assertEquals(test.getName() + " has mismatches " + "Test Link: " + test.getUrl(), 0, test.getMismatches());
+                assertEquals("Test Link: " + test.getUrl() + " has mismatches ", 0, test.getMismatches());
             }
             
         } finally {

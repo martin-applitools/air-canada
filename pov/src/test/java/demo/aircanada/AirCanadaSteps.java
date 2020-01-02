@@ -21,8 +21,7 @@ public class AirCanadaSteps {
         this.aircanadaPage.goToHomePage(); 
     }
     @Then("^I Visually Validate \"([^\"]*)\"$")
-    public void VisCheckHome(String tag) {
-        this.aircanadaPage.eyesCheck(tag);
+    public void VisCheckHome(String tag) { this.aircanadaPage.eyesCheckFluentLayoutRegion(tag);
     }
     @When("I go to Book Travel Page")
     public void NavigateBookTravel() {
