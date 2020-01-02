@@ -6,7 +6,7 @@ import com.applitools.eyes.selenium.Eyes;
 import com.applitools.eyes.StdoutLogHandler;
 import com.applitools.eyes.BatchInfo;
 import com.applitools.eyes.selenium.StitchMode;
-
+import com.applitools.eyes.fluent.Target;
 import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import demo.infrastructure.driver.Setup;
 import demo.infrastructure.driver.Wait;

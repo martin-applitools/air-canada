@@ -14,6 +14,7 @@ import com.applitools.eyes.visualgrid.model.DeviceName;
 import com.applitools.eyes.visualgrid.model.ScreenOrientation;
 
 
+
 import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import org.junit.BeforeClass;
@@ -53,7 +54,7 @@ public class Setup {
                 sconf.setParentBranchName("master");
                 sconf.setForceFullPageScreenshot(true);
                 sconf.setStitchMode(StitchMode.CSS);
-                sconf.setMatchLevel(MatchLevel.LAYOUT);
+                //sconf.setMatchLevel(MatchLevel.LAYOUT);
                 sconf.setBranchName(getCurrentGitBranch());
                 sconf.setAppName("AirCanadaDemo");
                 System.out.println("My Batch Id: " + batchId);

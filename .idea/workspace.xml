@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4709ae2-e7a9-4ee7-9414-d5a56783ea1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/TestResultsHandler/ApplitoolsTestResultsHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/TestResultsHandler/ResultStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/DownloadDiffExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_3_2_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pov/demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/basepage/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" afterDir="false" />
@@ -133,7 +122,8 @@
       <workItem from="1577835422989" duration="460000" />
       <workItem from="1577835986449" duration="153000" />
       <workItem from="1577836244152" duration="1200000" />
-      <workItem from="1577894373737" duration="6169000" />
+      <workItem from="1577894373737" duration="6392000" />
+      <workItem from="1577972862743" duration="2344000" />
     </task>
     <task id="LOCAL-00001" summary="Added Visual Grid Scenario, Readme, Command Line Options for Execution">
       <created>1577823915784</created>
@@ -163,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577826168439</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WIP&#10;- Updated Readme to further document project layout.&#10;- Added ApplitoolsTestResultsHandler to Project">
+      <created>1577902354975</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577902354976</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +174,8 @@
     <MESSAGE value="Updated gitignore to exclude test-output." />
     <MESSAGE value="Updated gitignore to exclude target directory." />
     <MESSAGE value="Fixed Readme location and updated typo Setup.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Readme location and updated typo Setup.java" />
+    <MESSAGE value="WIP&#10;- Updated Readme to further document project layout.&#10;- Added ApplitoolsTestResultsHandler to Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP&#10;- Updated Readme to further document project layout.&#10;- Added ApplitoolsTestResultsHandler to Project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="642" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577836486849">
@@ -188,9 +186,10 @@
       <screen x="0" y="23" width="2560" height="977" />
     </state>
     <state x="749" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577804317319" />
-    <state x="670" y="116" key="CommitChangelistDialog2" timestamp="1577826168302">
-      <screen x="0" y="23" width="2560" height="977" />
+    <state x="440" y="113" key="CommitChangelistDialog2" timestamp="1577902354653">
+      <screen x="0" y="23" width="1680" height="947" />
     </state>
+    <state x="440" y="113" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1577902354653" />
     <state x="670" y="116" key="CommitChangelistDialog2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577826168302" />
     <state x="932" y="283" key="EnvironmentVariablesDialog" timestamp="1577835950567">
       <screen x="0" y="23" width="2560" height="977" />
@@ -200,9 +199,10 @@
       <screen x="0" y="23" width="2560" height="977" />
     </state>
     <state x="1197" y="162" key="SettingsEditor/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577836233225" />
-    <state x="778" y="253" key="Vcs.Push.Dialog.v2" timestamp="1577826169867">
-      <screen x="0" y="23" width="2560" height="977" />
+    <state x="511" y="246" key="Vcs.Push.Dialog.v2" timestamp="1577902364137">
+      <screen x="0" y="23" width="1680" height="947" />
     </state>
+    <state x="511" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.947@0.23.1680.947" timestamp="1577902364137" />
     <state x="778" y="253" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577826169867" />
   </component>
 </project>
