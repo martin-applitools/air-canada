@@ -82,7 +82,7 @@ public class AirCanadaPage extends BasePage{
                     System.out.println("My Mismatch URL: " + test.getUrl() );
                 }
 
-                assertEquals("Test Link: " + test.getUrl() + " has mismatches ", 0, test.getMismatches());
+                assertEquals("Test Link: " + test.getUrl() + " has mismatches " + test.getName(), 0, test.getMismatches());
             }
             
         } finally {
