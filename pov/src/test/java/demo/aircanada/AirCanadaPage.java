@@ -33,8 +33,9 @@ public class AirCanadaPage extends BasePage{
 
     void goToHomePage(){
         driver.get(HOME_PAGE_URL);
-        wait.forLoading(5);
+        wait.forLoading(10);
         driver.findElement(By.cssSelector("#enUSEdition > span:nth-child(2)")).click();
+
     }
     void goToBookTravelPage(){
         driver.get(BOOK_TRAVEL_URL);

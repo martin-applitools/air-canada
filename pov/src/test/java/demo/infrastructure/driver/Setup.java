@@ -24,9 +24,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.Properties;
 
 public class Setup {
 
@@ -42,6 +41,14 @@ public class Setup {
 
     @Before
     public static void setWebDriver() throws Exception {
+        Properties props = System.getProperties();
+        try {
+            props.load(new FileInputStream(new File("src/test/resources/test.properties")));
+        } catch(Exception e) {
+            e.printStackTrace();
+            System.exit(-1);
+        }
+
         String eyesConfig = System.getProperty("eyesConfig");
         if (eyesConfig == null) {
             eyesConfig = "local";
@@ -49,9 +56,12 @@ public class Setup {
         switch (eyesConfig) {
             case "local":
                 Configuration sconf = new Configuration();
-                sconf.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
-                //eyes.setLogHandler(new StdoutLogHandler(true));
+                sconf.setApiKey(System.getProperty("applitools.api.key"));
+                RectangleSize viewportSizePortrait = new RectangleSize(/*width*/ 1200, /*height*/ 800 );
+                sconf.setViewportSize(viewportSizePortrait);
+                eyes.setLogHandler(new StdoutLogHandler(true));
                 sconf.setParentBranchName("master");
+                //sconf.setEnvironmentName("Chrome");
                 sconf.setForceFullPageScreenshot(true);
                 sconf.setStitchMode(StitchMode.CSS);
                 //sconf.setMatchLevel(MatchLevel.LAYOUT);
@@ -66,7 +76,7 @@ public class Setup {
                 break;
             case "vg":
                 Configuration sconfvg = new Configuration();
-                sconfvg.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
+                sconfvg.setApiKey(System.getProperty("applitools.api.key"));
                 sconfvg.setParentBranchName("master");
                 sconfvg.setForceFullPageScreenshot(true);
                 sconfvg.setStitchMode(StitchMode.CSS);
