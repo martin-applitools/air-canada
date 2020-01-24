@@ -1,24 +1,14 @@
 package demo.infrastructure.driver;
 
 import com.applitools.eyes.BatchInfo;
+import com.applitools.eyes.MatchLevel;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.StdoutLogHandler;
-import com.applitools.eyes.selenium.Eyes;
-import com.applitools.eyes.selenium.StitchMode;
-import com.applitools.eyes.MatchLevel;
-import com.applitools.eyes.selenium.ClassicRunner;
-
-import com.applitools.eyes.selenium.BrowserType;
-import com.applitools.eyes.selenium.Configuration;
+import com.applitools.eyes.selenium.*;
 import com.applitools.eyes.visualgrid.model.DeviceName;
 import com.applitools.eyes.visualgrid.model.ScreenOrientation;
-
-
-
+import com.applitools.eyes.visualgrid.services.VisualGridRunner;
 import io.cucumber.java.Before;
-import io.cucumber.junit.Cucumber;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,11 +17,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.*;
 import java.util.Properties;
 
-public class Setup {
+public class SetupVG {
 
     public static WebDriver driver;
-    public static ClassicRunner runner = new ClassicRunner();
-    public static Eyes eyes = new Eyes(runner);
+
+    public static VisualGridRunner runnerVG = new VisualGridRunner(100);
+    public static Eyes eyesVG = new Eyes(runnerVG);
     public static RectangleSize viewport = new RectangleSize(1200, 800);
 
     private static Long unixTime = System.currentTimeMillis();
@@ -46,23 +37,33 @@ public class Setup {
             e.printStackTrace();
             System.exit(-1);
         }
-        Configuration sconf = new Configuration();
-        sconf.setApiKey(System.getProperty("applitools.api.key"));
-        sconf.setViewportSize(viewport);
-        eyes.setLogHandler(new StdoutLogHandler(true));
-        sconf.setParentBranchName("master");
-        //sconf.setEnvironmentName("Chrome");
-        sconf.setForceFullPageScreenshot(true);
-        sconf.setStitchMode(StitchMode.CSS);
-        //sconf.setMatchLevel(MatchLevel.LAYOUT);
-        sconf.setBranchName(getCurrentGitBranch());
-        sconf.setAppName(System.getProperty("local.app.name"));
+        Configuration sconfvg = new Configuration();
+        sconfvg.setApiKey(System.getProperty("applitools.api.key"));
+        sconfvg.setViewportSize(viewport);
+        sconfvg.setParentBranchName("master");
+        sconfvg.setForceFullPageScreenshot(true);
+        sconfvg.setStitchMode(StitchMode.CSS);
+        sconfvg.setMatchLevel(MatchLevel.LAYOUT);
+        sconfvg.setBranchName(getCurrentGitBranch());
+        sconfvg.setAppName(System.getProperty("vg.app.name"));
+        //eyes.setLogHandler(new StdoutLogHandler(true));
         System.out.println("My Batch Id: " + batchId);
-        BatchInfo batch = new BatchInfo(System.getProperty("local.batch.name"));
-        batch.setId(batchId);
-        batch.setSequenceName(System.getProperty("local.sequence.name"));
-        sconf.setBatch(batch);
-        eyes.setConfiguration(sconf);
+        BatchInfo batchvg = new BatchInfo(System.getProperty("vg.batch.name"));
+        batchvg.setId(batchId);
+        batchvg.setSequenceName(System.getProperty("vg.sequence.name"));
+        sconfvg.setBatch(batchvg);
+        for (BrowserType browserType : BrowserType.values()) {
+            if (browserType != BrowserType.IE_10) {
+                sconfvg.addBrowser(1366, 768, browserType);
+                sconfvg.addBrowser(1920, 1080, browserType);
+                sconfvg.addBrowser(1400, 900, browserType);
+            }
+        }
+        for (DeviceName deviceName : DeviceName.values()) {
+            sconfvg.addDeviceEmulation(deviceName, ScreenOrientation.LANDSCAPE);
+            sconfvg.addDeviceEmulation(deviceName, ScreenOrientation.PORTRAIT);
+        }
+        eyesVG.setConfiguration(sconfvg);
 
         String browser = System.getProperty("browser");
         if (browser == null) {

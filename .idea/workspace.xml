@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4709ae2-e7a9-4ee7-9414-d5a56783ea1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pov/src/test/resources/test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/SetupVG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/AirCanadaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/BookTravelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/BookTravelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/BookTravelSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/basepage/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/exception.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/resources/demo/AirCanada.feature" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/resources/demo/BookTravel.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/resources/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/resources/test.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +69,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="demo.infrastructure.driver" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pov/src/test/java/demo/TestResultsExample" />
       <recent name="$PROJECT_DIR$/pov/ApplitoolsTestResultsHandler" />
@@ -129,7 +133,11 @@
       <workItem from="1578078246329" duration="2553000" />
       <workItem from="1578324061376" duration="1615000" />
       <workItem from="1578398266966" duration="4292000" />
-      <workItem from="1578434862241" duration="564000" />
+      <workItem from="1578434862241" duration="2251000" />
+      <workItem from="1578591550049" duration="311000" />
+      <workItem from="1578594397964" duration="802000" />
+      <workItem from="1578612528009" duration="2570000" />
+      <workItem from="1578675368945" duration="2449000" />
     </task>
     <task id="LOCAL-00001" summary="Added Visual Grid Scenario, Readme, Command Line Options for Execution">
       <created>1577823915784</created>
@@ -180,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577977140395</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="WIP: Test Properties stored in file">
+      <created>1578443770536</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578443770536</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +212,8 @@
     <MESSAGE value="WIP&#10;- Updated Readme to further document project layout.&#10;- Added ApplitoolsTestResultsHandler to Project" />
     <MESSAGE value="WIP Added Fluent API Example to Programatically Create layout region." />
     <MESSAGE value="WIP: TestResult on Failure Message Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP: TestResult on Failure Message Update" />
+    <MESSAGE value="WIP: Test Properties stored in file" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: Test Properties stored in file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="170" width="1071" height="773" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577978667012">
@@ -209,11 +225,11 @@
       <screen x="0" y="23" width="2560" height="977" />
     </state>
     <state x="749" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577804317319" />
-    <state x="440" y="113" key="CommitChangelistDialog2" timestamp="1577977140277">
-      <screen x="0" y="23" width="1680" height="947" />
+    <state x="670" y="73" key="CommitChangelistDialog2" timestamp="1578443770362">
+      <screen x="0" y="23" width="2560" height="977" />
     </state>
     <state x="440" y="113" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1577977140277" />
-    <state x="670" y="116" key="CommitChangelistDialog2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577826168302" />
+    <state x="670" y="73" key="CommitChangelistDialog2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1578443770362" />
     <state x="612" y="275" key="EnvironmentVariablesDialog" timestamp="1577978653557">
       <screen x="0" y="23" width="1680" height="947" />
     </state>
@@ -224,10 +240,10 @@
     </state>
     <state x="0" y="23" key="SettingsEditor/0.23.1680.947@0.23.1680.947" timestamp="1578056025824" />
     <state x="1197" y="162" key="SettingsEditor/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577836233225" />
-    <state x="511" y="246" key="Vcs.Push.Dialog.v2" timestamp="1577977142067">
-      <screen x="0" y="23" width="1680" height="947" />
+    <state x="778" y="253" key="Vcs.Push.Dialog.v2" timestamp="1578443772966">
+      <screen x="0" y="23" width="2560" height="977" />
     </state>
     <state x="511" y="246" key="Vcs.Push.Dialog.v2/0.23.1680.947@0.23.1680.947" timestamp="1577977142067" />
-    <state x="778" y="253" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1577826169867" />
+    <state x="778" y="253" key="Vcs.Push.Dialog.v2/2560.23.1680.1027/0.23.2560.977@0.23.2560.977" timestamp="1578443772966" />
   </component>
 </project>

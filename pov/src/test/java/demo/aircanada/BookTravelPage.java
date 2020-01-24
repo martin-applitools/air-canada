@@ -19,7 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class AirCanadaPage extends BasePage{
+public class BookTravelPage extends BasePage{
 
     private static final String HOME_PAGE_URL = "https://www.aircanada.com/us/en/aco/home.html#/";
     private static final String BOOK_TRAVEL_URL = "https://www.aircanada.com/us/en/aco/home/book/travels.html";
@@ -27,7 +27,7 @@ public class AirCanadaPage extends BasePage{
     private static final String FLY_FLIGHT_INFO_URL = "https://www.aircanada.com/us/en/aco/home/fly/flight-information.html";
     private static final String ALTITUDE_OVERVIEW_URL = "https://www.aircanada.com/us/en/aco/home/altitude/program-overview.html";
 
-    AirCanadaPage() {
+    BookTravelPage() {
         PageFactory.initElements(driver, this);
     }
 
@@ -74,6 +74,7 @@ public class AirCanadaPage extends BasePage{
 
     void eyesTestResults(){
         try {
+            eyes.closeAsync();
             TestResultsSummary AllTestResults = this.runner.getAllTestResults(false);
             TestResultContainer[] results = AllTestResults.getAllResults();
             for(TestResultContainer result: results){

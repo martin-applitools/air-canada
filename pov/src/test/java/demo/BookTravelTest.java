@@ -14,10 +14,10 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/demo/AirCanada.feature"},
+@CucumberOptions(features = {"src/test/resources/demo/BookTravel.feature"},
         strict = false, plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         "json:target/cucumber_json_reports/aircanada.json"},
         glue = {"demo.infrastructure.driver",
                 "demo.aircanada"})
-public class AirCanadaTest {
+public class BookTravelTest {
 }
