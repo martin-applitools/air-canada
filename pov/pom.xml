@@ -11,6 +11,7 @@
 
     <properties>
         <cucumber.version>4.8.0</cucumber.version>
+        <applitools.sdk.version>3.159.0</applitools.sdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -44,7 +45,7 @@
         <dependency>
             <groupId>com.applitools</groupId>
             <artifactId>eyes-selenium-java3</artifactId>
-            <version>3.158.9</version>
+            <version>${applitools.sdk.version}</version>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>

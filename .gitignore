@@ -3,4 +3,9 @@ pov/test-output/.DS_Store
 /.vscode/
 /pov/test-output/
 /pov/target/
-
+.idea/
+pov/.classpath
+pov/.settings/org.eclipse.core.resources.prefs
+pov/.settings/org.eclipse.jdt.apt.core.prefs
+pov/.settings/org.eclipse.jdt.core.prefs
+pov/.settings/org.eclipse.m2e.core.prefs

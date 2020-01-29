@@ -66,6 +66,7 @@ pov/src/test/java/demo
     TestResultsHandler/
         ApplitoolsTestResultshandler.java - extends the capabilities of TestResults with additional API calls. With this additional API calls you will be able to retrive additional details at the end of the test
         ResultStatus.java - extends the capabilities of TestResults with additional API calls. With this additional API calls you will be able to retrive additional details at the end of the test
+        DownloadDiffExample.java - Example of how Test Results Handler can be used for a variety of use cases.
     AirCanadaTest.java - Cucumber Execution configuration for defined scenario in pov/src/test/resources/demo/AirCanada.feature
 ```
 
