@@ -4,8 +4,6 @@ This project is an example of integrating Applitools with a UI functional test f
 
 Test scenarios are described in feature files located here ./src/test/resources/demo.  Extent Reporting configuration is located in extent.properties and html-config.xml located here ./src/test/resources.
 
-
-
 ## Installation ##
 
 You need to have [Java 8 JDK](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html) installed along with [maven](https://maven.apache.org/).
