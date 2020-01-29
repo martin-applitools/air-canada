@@ -20,9 +20,9 @@ public class DownloadDiffExample {
 
         WebDriver driver = new ChromeDriver();
         Eyes eyes = new Eyes();
-        String viewkey = ("afqlg5vpbCVj8110CTIecnaxD6700hSr1rapl6103o7Dkmo110");
-        String writekey = ("Jnv100fnYNuIIuguqk04xnITc7z107onPe6AeMg2dRNj1Ic110");
-        String apikey = ("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
+        String viewkey = ("INSERT VIEW KEY");
+        String writekey = ("INSERT WRITE KEY");
+        String apikey = ("INSERT API EXECUTE KEY");
         eyes.setApiKey(apikey);
        
 
