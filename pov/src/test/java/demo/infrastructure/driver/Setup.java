@@ -49,7 +49,7 @@ public class Setup {
         switch (eyesConfig) {
             case "local":
                 Configuration sconf = new Configuration();
-                sconf.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
+                sconf.setApiKey("INSERT API KEY");
                 //eyes.setLogHandler(new StdoutLogHandler(true));
                 sconf.setParentBranchName("master");
                 sconf.setForceFullPageScreenshot(true);
@@ -66,7 +66,7 @@ public class Setup {
                 break;
             case "vg":
                 Configuration sconfvg = new Configuration();
-                sconfvg.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
+                sconfvg.setApiKey("INSERT API KEY");
                 sconfvg.setParentBranchName("master");
                 sconfvg.setForceFullPageScreenshot(true);
                 sconfvg.setStitchMode(StitchMode.CSS);
