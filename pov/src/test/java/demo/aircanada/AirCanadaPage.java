@@ -6,6 +6,7 @@ import com.applitools.eyes.TestResultsSummary;
 import demo.basepage.BasePage;
 import com.applitools.eyes.selenium.fluent.Target;
 import demo.TestResultsHandler.*;
+import io.cucumber.core.api.Scenario;
 import io.cucumber.java.Before;
 import io.cucumber.junit.Cucumber;
 import org.junit.Assert;
@@ -22,41 +23,55 @@ import static org.junit.Assert.assertTrue;
 public class AirCanadaPage extends BasePage{
 
     private static final String HOME_PAGE_URL = "https://www.aircanada.com/us/en/aco/home.html#/";
-    private static final String BOOK_TRAVEL_URL = "https://www.aircanada.com/us/en/aco/home/book/travels.html";
-    private static final String PLAN_CHECK_IN_INFO_URL = "https://www.aircanada.com/us/en/aco/home/plan/check-in-information.html";
-    private static final String FLY_FLIGHT_INFO_URL = "https://www.aircanada.com/us/en/aco/home/fly/flight-information.html";
-    private static final String ALTITUDE_OVERVIEW_URL = "https://www.aircanada.com/us/en/aco/home/altitude/program-overview.html";
+    
 
     AirCanadaPage() {
         PageFactory.initElements(driver, this);
     }
 
-    void goToHomePage(){
+    void goToHomePage(String testName){
+        eyes.open(driver, this.eyes.getAppName(), testName, viewport);
         driver.get(HOME_PAGE_URL);
-        wait.forLoading(5);
+        eyes.checkWindow();
+        sleeptime();
+        
+    }
+    void siteEditionSelection(String edition){
         driver.findElement(By.cssSelector("#enUSEdition > span:nth-child(2)")).click();
+        sleeptime();
+        eyes.checkWindow();
     }
-    void goToBookTravelPage(){
-        driver.get(BOOK_TRAVEL_URL);
-        wait.forLoading(5);
+    void selectOriginDestination(String origin, String destination) {
+        driver.findElement(By.id("flightLocationListOrginId0Label")).click();
+        sleeptime();
+        driver.findElement(By.id("origin_R_0")).sendKeys(origin);
+        sleeptime();
+        driver.findElement(By.cssSelector(".active > span:nth-child(3) > span")).click();
+        sleeptime();
+        driver.findElement(By.id("destination_label_0")).click();
+        sleeptime();
+        driver.findElement(By.id("destination_R_0")).sendKeys(destination);
+        sleeptime();
+        driver.findElement(By.cssSelector("#flightLocationListDestinationId0_locationListItem_0 .airport-name")).click();
+        eyes.checkWindow();
+        sleeptime();
     }
-    void goToPlanCheckInPage(){
-        driver.get(PLAN_CHECK_IN_INFO_URL);
-        wait.forLoading(5);
-    }
-    void goToFlyFlightInfoPage(){
-        driver.get(FLY_FLIGHT_INFO_URL);
-        wait.forLoading(5);
-    }
-    void goToAltitudeOverviewPage(){
-        driver.get(ALTITUDE_OVERVIEW_URL);
-        wait.forLoading(5);
-    }
+
+    public void sleeptime() {
+        try {
+          // thread to sleep for 1000 milliseconds
+          Thread.sleep(5000);
+        } catch (Exception e) {
+          System.out.println(e);
+        }
+        
+      }
+
     void openEyes(String testName){ eyes.open(driver, this.eyes.getAppName(), testName, viewport ); }
 
-    void eyesCheck(String testName){
+    void eyesCheck(String testName, String tag){
         openEyes(testName);
-        eyes.checkWindow(testName);
+        eyes.checkWindow(tag);
         eyes.closeAsync();
     }
     void eyesCheckFluentLayout(String testName) {

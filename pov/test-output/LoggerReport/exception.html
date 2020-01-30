@@ -99,12 +99,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">java.lang.AssertionError</a>
+							<a href="#" class="item-title _500">com.applitools.eyes.EyesException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">java.lang.AssertionError</h5>
+								<h5 class="mb-4">com.applitools.eyes.EyesException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -116,10 +116,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="14" parent-id="1">
+<tr class="s-fail" test-id="13" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then Get Applitools Test Results <br/><span class="text-muted text-sm">Check Air Canada Web Site Display</span></td>
-	<td>0h 0m 0s+350msc</td>
+	<td class="_600">Given A user navigates to Air Canada Web Site <br/><span class="text-muted text-sm">Run Web Application Test <ID></span></td>
+	<td>0h 0m 1s+694msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -128,13 +128,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">java.lang.AssertionError: Test Link: https://eyes.applitools.com/app/batches/00000251824324023639/00000251824324023514?accountId=Ow7tONT_mEu3bq7XXzAT0A~~ has mismatches  expected:<0> but was:<1>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at demo.aircanada.AirCanadaPage.eyesTestResults(AirCanadaPage.java:85)
-	at demo.aircanada.AirCanadaSteps.GetApplitoolsResults(AirCanadaSteps.java:59)
-	at ✽.Get Applitools Test Results(file:src/test/resources/demo/AirCanada.feature:15)
+		<textarea disabled class="code-block">com.applitools.eyes.EyesException: A test is already running
+	at com.applitools.eyes.EyesBase.validateSessionOpen(EyesBase.java:1090)
+	at com.applitools.eyes.EyesBase.openBase(EyesBase.java:999)
+	at com.applitools.eyes.selenium.SeleniumEyes.open(SeleniumEyes.java:281)
+	at com.applitools.eyes.selenium.SeleniumEyes.open(SeleniumEyes.java:243)
+	at com.applitools.eyes.selenium.Eyes.open(Eyes.java:1177)
+	at demo.aircanada.AirCanadaPage.goToHomePage(AirCanadaPage.java:33)
+	at demo.aircanada.AirCanadaSteps.aUserNavigatesToHomePage(AirCanadaSteps.java:29)
+	at ?.A user navigates to Air Canada Web Site(file:src/test/resources/demo/AirCanada.feature:5)
 </textarea>
 	</td>
 </tr>
@@ -162,7 +164,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 2, 2020 09:52:43 AM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Jan 29, 2020 07:57:00 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

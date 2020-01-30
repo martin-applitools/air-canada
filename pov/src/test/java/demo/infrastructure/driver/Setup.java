@@ -50,7 +50,7 @@ public class Setup {
             case "local":
                 Configuration sconf = new Configuration();
                 sconf.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
-                //eyes.setLogHandler(new StdoutLogHandler(true));
+                eyes.setLogHandler(new StdoutLogHandler(true));
                 sconf.setParentBranchName("master");
                 sconf.setForceFullPageScreenshot(true);
                 sconf.setStitchMode(StitchMode.CSS);
@@ -102,15 +102,17 @@ public class Setup {
         }
         switch (browser) {
             case "chrome":
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless", "--ignore-certificate-errors");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();
                 break;
             case "chrome-headless":
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless", "--ignore-certificate-errors");
-                driver = new ChromeDriver(chromeOptions);
+                //ChromeOptions chromeOptions = new ChromeOptions();
+                //chromeOptions.addArguments("--headless", "--ignore-certificate-errors");
+                driver = new ChromeDriver();
                 break;
             default:
                 throw new IllegalArgumentException("Browser \"" + browser + "\" isn't supported.");

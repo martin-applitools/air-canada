@@ -7,54 +7,36 @@ import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 import org.junit.runner.RunWith;
 
+import cucumber.api.java.Before;
+import io.cucumber.core.api.Scenario;;
+
 public class AirCanadaSteps {
 
-
+    public Scenario scenario;
     private AirCanadaPage aircanadaPage;
+    private Scenario sce;
 
     public AirCanadaSteps() {
         this.aircanadaPage = new AirCanadaPage();
+        
     }
-
+    @io.cucumber.java.Before
+     public void beforeHook(Scenario scenario) {
+          this.sce = scenario;
+     }
     @Given("A user navigates to Air Canada Web Site")
     public void aUserNavigatesToHomePage() {
-        this.aircanadaPage.goToHomePage(); 
+        this.aircanadaPage.goToHomePage(sce.getName());
     }
-    @Then("^I Visually Validate \"([^\"]*)\"$")
-    public void VisCheckHome(String tag) { this.aircanadaPage.eyesCheckFluentLayoutRegion(tag);
+    @When("A user launches the site in {string}")
+    public void a_user_launches_the_site_in(String edition) {
+        this.aircanadaPage.siteEditionSelection(edition);
+        //this.aircanadaPage.eyesCheck(sce.getName());
     }
-    @When("I go to Book Travel Page")
-    public void NavigateBookTravel() {
-         this.aircanadaPage.goToBookTravelPage();
-    }
-    @Then("^I Check \"([^\"]*)\"$")
-    public void VisTravel(String tag) {
-         this.aircanadaPage.eyesCheck(tag);
-    }
-    @When("I go to Check In Information Page")
-     public void NavigatePlanCheckIn() {
-          this.aircanadaPage.goToPlanCheckInPage();
-    }
-    @Then("^I Review \"([^\"]*)\"$")
-     public void VisCheckIn(String tag) {
-          this.aircanadaPage.eyesCheck(tag);
-    }
-    @When("I go to Flight Information Page")
-    public void NavigateFlightInfoPage() {
-         this.aircanadaPage.goToFlyFlightInfoPage();
-    }
-    @Then("^I see \"([^\"]*)\"$")
-    public void FlightInfo(String tag) {
-         this.aircanadaPage.eyesCheck(tag);
-    }
-    @When("I go to Current Loyalty Program Overview Page")
-    public void NavigateLoyaltyOverviewPage() {
-         this.aircanadaPage.goToAltitudeOverviewPage();
-    }
-    @Then("^Validate \"([^\"]*)\"$")
-    public void LoyaltyOverview(String tag) {
-         this.aircanadaPage.eyesCheck(tag);
-    }
-    @Then("Get Applitools Test Results")
-    public void GetApplitoolsResults() { this.aircanadaPage.eyesTestResults(); }
+    @When("User enters {string} and {string} in Home Page")
+     public void user_enters_and_in_Home_Page(String origin, String destination) {
+        this.aircanadaPage.selectOriginDestination(origin, destination);
+     }
+
+
 }
