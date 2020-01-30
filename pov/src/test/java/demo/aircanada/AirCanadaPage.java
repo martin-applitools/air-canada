@@ -55,6 +55,14 @@ public class AirCanadaPage extends BasePage{
         driver.findElement(By.cssSelector("#flightLocationListDestinationId0_locationListItem_0 .airport-name")).click();
         eyes.checkWindow();
         sleeptime();
+        //eyes.close(false);
+        TestResults AllTestResults = eyes.close(false);
+        //if (AllTestResults.getMismatches() > 0) {
+            System.out.println("My Mismatch URL: " + AllTestResults.getUrl() );
+            System.out.println("StepInfo" + AllTestResults.getStepsInfo());
+
+        //}
+        eyes.abortIfNotClosed();
     }
 
     public void sleeptime() {
@@ -88,17 +96,19 @@ public class AirCanadaPage extends BasePage{
 
     void eyesTestResults(){
         try {
-            TestResultsSummary AllTestResults = this.runner.getAllTestResults(false);
-            TestResultContainer[] results = AllTestResults.getAllResults();
-            for(TestResultContainer result: results){
-                TestResults test = result.getTestResults();
+            TestResults AllTestResults = this.eyes.close(false);
+            //TestResultContainer[] results = AllTestResults.();
+            //for(AllTestResults result: results){
+                //TestResults test = result.getTestResults();
 
-                if (test.getMismatches() > 0) {
-                    System.out.println("My Mismatch URL: " + test.getUrl() );
+                if (AllTestResults.getMismatches() > 0) {
+                    System.out.println("My Mismatch URL: " + AllTestResults.getUrl() );
+                    System.out.println("" + AllTestResults.getStepsInfo());
+
                 }
 
-                assertEquals("Test Link: " + test.getUrl() + " has mismatches " + test.getName(), 0, test.getMismatches());
-            }
+                assertEquals("Test Link: " + AllTestResults.getUrl() + " has mismatches " + AllTestResults.getName(), 0, AllTestResults.getMismatches());
+            //}
             
         } finally {
             this.eyes.abortIfNotClosed();

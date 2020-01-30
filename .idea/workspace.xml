@@ -4,6 +4,8 @@
     <list default="true" id="c4709ae2-e7a9-4ee7-9414-d5a56783ea1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/aircanada/AirCanadaSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/pov/src/test/java/demo/infrastructure/driver/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/HtmlReport/ExtentHtml.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pov/test-output/LoggerReport/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/pov/test-output/LoggerReport/exception.html" afterDir="false" />
@@ -164,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577975711734</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="WIP Added Fluent API Example to Programatically Create layout region.">
+      <created>1580392654366</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580392654366</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -34,7 +34,7 @@ public class Setup {
 
     //public static VisualGridRunner runner = new VisualGridRunner(100);
     public static ClassicRunner runner = new ClassicRunner();
-    public static Eyes eyes = new Eyes(runner);
+    public static Eyes eyes = new Eyes();
     public static RectangleSize viewport = new RectangleSize(1200, 800);
 
     private static Long unixTime = System.currentTimeMillis();
@@ -50,7 +50,7 @@ public class Setup {
             case "local":
                 Configuration sconf = new Configuration();
                 sconf.setApiKey("SZT3IpNet90iVi7HVGwsJSzz5lXFXrxM99LYlyQYYMDA110");
-                eyes.setLogHandler(new StdoutLogHandler(true));
+                //eyes.setLogHandler(new StdoutLogHandler(true));
                 sconf.setParentBranchName("master");
                 sconf.setForceFullPageScreenshot(true);
                 sconf.setStitchMode(StitchMode.CSS);
