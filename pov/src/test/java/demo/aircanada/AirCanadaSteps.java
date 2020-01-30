@@ -30,13 +30,13 @@ public class AirCanadaSteps {
 //    public void afterHook() {
 //        this.aircanadaPage.eyesTestResults();
 //    }
-    @Given("A user navigates to Air Canada Web Site")
-    public void aUserNavigatesToHomePage() {
-        this.aircanadaPage.goToHomePage(sce.getName());
+    @Given("^(A user navigates to Air Canada Web Site)$")
+    public void aUserNavigatesToHomePage(String stepName) {
+        this.aircanadaPage.goToHomePage(sce.getName(), stepName);
     }
-    @When("A user launches the site in {string}")
-    public void a_user_launches_the_site_in(String edition) {
-        this.aircanadaPage.siteEditionSelection(edition);
+    @When("^(A user launches the site in US Edition)$")
+    public void a_user_launches_the_site_in(String stepName) {
+        this.aircanadaPage.siteEditionSelection(stepName);
         //this.aircanadaPage.eyesCheck(sce.getName());
     }
     @When("User enters {string} and {string} in Home Page")

@@ -29,17 +29,17 @@ public class AirCanadaPage extends BasePage{
         PageFactory.initElements(driver, this);
     }
 
-    void goToHomePage(String testName){
+    void goToHomePage(String testName, String stepName){
         eyes.open(driver, this.eyes.getAppName(), testName, viewport);
         driver.get(HOME_PAGE_URL);
-        eyes.checkWindow();
+        eyes.checkWindow(stepName);
         sleeptime();
         
     }
-    void siteEditionSelection(String edition){
+    void siteEditionSelection(String stepName){
         driver.findElement(By.cssSelector("#enUSEdition > span:nth-child(2)")).click();
         sleeptime();
-        eyes.checkWindow();
+        eyes.checkWindow(stepName);
     }
     void selectOriginDestination(String origin, String destination) {
         driver.findElement(By.id("flightLocationListOrginId0Label")).click();
@@ -53,13 +53,13 @@ public class AirCanadaPage extends BasePage{
         driver.findElement(By.id("destination_R_0")).sendKeys(destination);
         sleeptime();
         driver.findElement(By.cssSelector("#flightLocationListDestinationId0_locationListItem_0 .airport-name")).click();
-        eyes.checkWindow();
+        eyes.checkWindow(origin + "-" + destination);
         sleeptime();
         //eyes.close(false);
         TestResults AllTestResults = eyes.close(false);
         //if (AllTestResults.getMismatches() > 0) {
-            System.out.println("My Mismatch URL: " + AllTestResults.getUrl() );
-            System.out.println("StepInfo" + AllTestResults.getStepsInfo());
+            System.out.println("My Mismatch URL: " + AllTestResults.getUrl());
+            
 
         //}
         eyes.abortIfNotClosed();
@@ -102,8 +102,8 @@ public class AirCanadaPage extends BasePage{
                 //TestResults test = result.getTestResults();
 
                 if (AllTestResults.getMismatches() > 0) {
-                    System.out.println("My Mismatch URL: " + AllTestResults.getUrl() );
-                    System.out.println("" + AllTestResults.getStepsInfo());
+                    System.out.println("My Mismatch URL: " + AllTestResults.getUrl());
+                    System.out.println("Steps" + AllTestResults.getName() + AllTestResults.getStatus());
 
                 }
 

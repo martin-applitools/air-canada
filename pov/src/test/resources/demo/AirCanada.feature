@@ -3,7 +3,7 @@ Feature: AirCanada
 
   Scenario Outline: Run Web Application Test <ID>
     Given A user navigates to Air Canada Web Site 
-    When A user launches the site in "<Edition>"
+    When A user launches the site in US Edition
     And User enters "<Origin>" and "<Destination>" in Home Page
 
   Examples:
