@@ -7,6 +7,6 @@ Feature: AirCanada
     And User enters "<Origin>" and "<Destination>" in Home Page
 
   Examples:
-  | ID |  Edition | Origin | Destination |
-  | 1 | UnitedStates  | AUS  | YYZ  |
-  | 2 | UnitedStates  | AUS  | YEG  |
+  | ID | Origin | Destination |
+  | 1 | AUS  | YYZ  |
+  | 2 | AUS  | YEG  |
